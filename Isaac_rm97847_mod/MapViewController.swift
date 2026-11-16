@@ -19,8 +19,8 @@ class MapViewController: UIViewController {
 
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: lati, longitude: long)
-        annotation.title = "Torre Eiffel"
-        annotation.subtitle = "Beleza única e arquitetura histórica, mas com perigos reais de furtos e ventos fortes no topo."
+        annotation.title = "Torre Eiffel, area com bastante movimento perigo mediano"
+        annotation.subtitle = "Analisa á area em busca de novas informaçoes de acontecimentos perigosos, areas de risco, pessoas perigosas e cuidados para se ter ao passear por essa area .Beleza única e arquitetura histórica, mas com perigos reais de furtos e ventos fortes no topo."
         mapView.addAnnotation(annotation)
         
         let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 250, longitudinalMeters: 250)
