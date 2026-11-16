@@ -15,6 +15,8 @@
 		AC5154CD30AB976D0094A17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5154CC30AB976D0094A17B /* Assets.xcassets */; };
 		AC5154D030AB976D0094A17B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5154CE30AB976D0094A17B /* LaunchScreen.storyboard */; };
 		AC5154D830AB98CB0094A17B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5154D730AB98CB0094A17B /* MapViewController.swift */; };
+		AC5154DA30ABA6650094A17B /* AvisoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5154D930ABA6650094A17B /* AvisoTableViewController.swift */; };
+		AC5154DC30ABA67A0094A17B /* AvisoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5154DB30ABA67A0094A17B /* AvisoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AC5154CF30AB976D0094A17B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC5154D130AB976D0094A17B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC5154D730AB98CB0094A17B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AC5154D930ABA6650094A17B /* AvisoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisoTableViewController.swift; sourceTree = "<group>"; };
+		AC5154DB30ABA67A0094A17B /* AvisoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				AC5154C230AB97690094A17B /* SceneDelegate.swift */,
 				AC5154C430AB97690094A17B /* ViewController.swift */,
 				AC5154C630AB97690094A17B /* Main.storyboard */,
+				AC5154D930ABA6650094A17B /* AvisoTableViewController.swift */,
+				AC5154DB30ABA67A0094A17B /* AvisoViewController.swift */,
 				AC5154D730AB98CB0094A17B /* MapViewController.swift */,
 				AC5154CC30AB976D0094A17B /* Assets.xcassets */,
 				AC5154CE30AB976D0094A17B /* LaunchScreen.storyboard */,
@@ -144,9 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5154DA30ABA6650094A17B /* AvisoTableViewController.swift in Sources */,
 				AC5154C530AB97690094A17B /* ViewController.swift in Sources */,
 				AC5154C130AB97690094A17B /* AppDelegate.swift in Sources */,
 				AC5154C330AB97690094A17B /* SceneDelegate.swift in Sources */,
+				AC5154DC30ABA67A0094A17B /* AvisoViewController.swift in Sources */,
 				AC5154D830AB98CB0094A17B /* MapViewController.swift in Sources */,
 				AC5154CB30AB97690094A17B /* Isaac_rm97847_mod.xcdatamodeld in Sources */,
 			);
