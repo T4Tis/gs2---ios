@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import CoreData
 
 class AvisoTableViewController: UITableViewController {
 
+    var avisos: [NSManagedObject] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,23 +26,24 @@ class AvisoTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return avisos.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let aviso = avisos[indexPath.row]
+        
+        cell.textLabel?.text = aviso.value(forKeyPath: "titulo") as? String
+        cell.detailTextLabel?.text = aviso.value(forKeyPath: "info") as? String
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -76,6 +80,24 @@ class AvisoTableViewController: UITableViewController {
     }
     */
 
+    override func viewWillAppear(_ animated: Bool) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        let manegedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Aviso")
+        
+        fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "titulo", ascending: true)]
+        
+        do {
+            avisos = try manegedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Erro ao Buscar os dados. \(error), \(error.userInfo)")
+        }
+        self.tableView.reloadData()
+    }
+    
+    
     /*
     // MARK: - Navigation
 
